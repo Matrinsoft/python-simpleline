@@ -31,7 +31,7 @@ jobs:
               set -euo pipefail
               dnf install -y -q --setopt=install_weak_deps=False \
                 rpm-build rpmdevtools dnf-plugins-core make git tar gzip xz findutils \
-                autoconf automake libtool gettext python3-devel python3-build nodejs npm
+                autoconf automake libtool gettext python3-devel python3-build python3-setuptools nodejs npm
               case "$PACKAGE_NAME" in
                 anaconda)
                   dnf builddep -y -q anaconda.spec.in || true
